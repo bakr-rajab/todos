@@ -1,0 +1,31 @@
+@url= http://localhost:3333
+@port=3333
+@host=localhost
+
+### show all todos
+GET {{ url}}/todos/ HTTP/1.1
+
+### show todo by id
+GET {{ url}}/todos/623f13c889ed5bed610db769
+Content-Type: application/json
+
+### add new todo 
+POST {{url}}/todos/
+Content-Type: application/json
+
+{
+    "title": "JAva js course for backend",
+    "status": false
+}
+
+### edit todo by id
+PUT {{ url}}/todos/61a03e6aaab8446c74d57f7e
+Content-Type: application/json
+
+{
+    "title": "Edit todo by id"
+}
+
+### delete todo by id
+DELETE {{ url}}/todos/623f2cf6e7f77ac5339fd2e6
+Content-Type: application/json
